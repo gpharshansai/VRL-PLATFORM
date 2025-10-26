@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join Class - VRL PLATFORM</title>
+    <style>
+        body {
+            background-color: #001f3f;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #003366;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .control-button {
+            background-color: #0074D9;
+            color: #ffffff;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 24px;
+        }
+
+        .control-button:hover {
+            background-color: #005bb5;
+        }
+
+        .join-button {
+            background-color: #28a745;
+            color: #ffffff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .join-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Join the Class</h1>
+        <div class="controls">
+            <button class="control-button" title="Toggle Microphone">&#x1F3A4;</button> <!-- Microphone Icon -->
+            <button class="control-button" title="Toggle Camera">&#x1F4F9;</button> <!-- Camera Icon -->
+        </div>
+        <button class="join-button" onclick="joinClass()">Join Now</button>
+    </div>
+
+    <script>
+        function joinClass() {
+            window.location.href = "waiting.html"; // Redirect to waiting page
+        }
+    </script>
+</body>
+</html>

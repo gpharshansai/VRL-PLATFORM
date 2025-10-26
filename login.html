@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - VRL PLATFORM</title>
+    <style>
+        body {
+            background-color: #001f3f; /* Dark blue */
+            color: #ffffff; /* White text */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #003366; /* Darker blue */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 100%; /* Responsive logo */
+            max-width: 250px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="password"], input[type="submit"], .ok-button {
+            width: calc(100% - 22px);
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        input[type="submit"], .ok-button {
+            background-color: #0074D9;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        input[type="submit"]:hover, .ok-button:hover {
+            background-color: #005bb5;
+            transform: scale(1.05);
+        }
+
+        .link {
+            color: #39CCCC;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        .confirmation-message {
+            color: #2ECC40;
+            font-size: 16px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                max-width: 90%;
+            }
+
+            input[type="text"], input[type="password"], input[type="submit"], .ok-button {
+                width: calc(100% - 16px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <!-- ✅ Updated image path -->
+            <img src="C:\Users\gphar\OneDrive\Pictures\Screenshots\Screenshot 2025-10-10 131215.png" alt="VRL Platform Logo">
+        </div>
+        <form action="http://localhost:8080/login" method="post">
+            <h2>Login</h2>
+            <input type="text" name="email" placeholder="Email ID" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+            <div>
+                <a href="forgot_password.html" class="link">Forgot Password</a> | 
+                <a href="register.html" class="link">Create a new account</a> 
+            </div>
+        </form>
+    </div>
+</body>
+</html>

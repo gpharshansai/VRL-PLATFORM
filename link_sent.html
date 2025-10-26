@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verification Link Sent - VRL PLATFORM</title>
+    <style>
+        body {
+            background-color: #001f3f; /* Dark blue */
+            color: #ffffff; /* White text */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #001326; /* Blackish-blue */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center; /* Center text in the container */
+        }
+        .message {
+            opacity: 0;
+            animation: fadeIn 2s forwards; /* Fade-in animation */
+            margin-bottom: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .back-link {
+            color: #0074D9; /* Blue */
+            text-decoration: none; /* No underline */
+            padding: 5px 10px;
+            border: 1px solid #0074D9; /* Border to match the color */
+            border-radius: 4px; /* Rounded corners */
+            transition: background-color 0.3s; /* Transition effect */
+        }
+        .back-link:hover {
+            background-color: #0074D9; /* Change background on hover */
+            color: #ffffff; /* Change text color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            <h2>Verification Link Sent!</h2>
+            <p>A verification link has been successfully sent to your registered email address.</p>
+        </div>
+        <a href="login.html" class="back-link">Back to Forgot Password</a> <!-- Link updated to login.html -->
+    </div>
+</body>
+</html>

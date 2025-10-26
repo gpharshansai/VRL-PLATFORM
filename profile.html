@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            background-color: rgba(0, 31, 63, 0.9); /* Dark background with transparency */
+            padding: 40px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            text-align: center;
+            color: #0074D9; /* Blue */
+            text-transform: uppercase;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #b0c4de; /* Light blue */
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #e8f0fe; /* Light blue background */
+            color: #000;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0074D9; /* Blue */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #005bb5; /* Darker blue */
+        }
+
+        .cancel-button {
+            background-color: #f44336; /* Red */
+            font-size: 16px;
+        }
+
+        .cancel-button:hover {
+            background-color: #e53935; /* Darker red */
+        }
+
+        .message {
+            text-align: center;
+            color: #ff6347; /* Tomato red */
+            margin-top: 20px;
+        }
+
+        /* Confirmation message */
+        .confirmation-message {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            color: green; /* Green for success */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Update Profile</h1>
+
+        <form method="POST" action="/studentprofile">
+            <!-- Name Field -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="" required>
+
+            <!-- Date of Birth Field -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" value="" required>
+
+            <!-- Email Field -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="" required>
+
+            <!-- Parent Phone Number Field -->
+            <label for="parent_phone">Parent's Phone Number:</label>
+            <input type="text" id="parent_phone" name="parent_phone" value="" required>
+
+            <!-- Password Field -->
+            <label for="password">New Password (Leave blank if not changing):</label>
+            <input type="password" id="password" name="password" value="">
+
+            <!-- Confirm Password Field for Reset -->
+            <label for="confirm_password">Confirm New Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" value="">
+
+            <button type="submit">Update Profile</button>
+        </form>
+
+        <form action="/welcome" method="GET">
+            <button type="submit" class="cancel-button">Cancel</button>
+        </form>
+
+        <div class="message">
+            <!-- Any success or error messages will go here -->
+        </div>
+
+        <!-- OK button and confirmation message -->
+        <button type="button" class="ok-button" onclick="showUpdatedMessage()">OK</button>
+        <div class="confirmation-message" id="confirmationMessage">Updated</div>
+    </div>
+
+    <script>
+        function showUpdatedMessage() {
+            // Display the confirmation message
+            document.getElementById("confirmationMessage").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - VRL PLATFORM</title>
+    <style>
+        body {
+            background-color: #001f3f;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #003366;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        input[type="text"], select {
+            width: calc(100% - 22px);
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #0074D9;
+            color: #ffffff;
+            padding: 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005bb5;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #b0c4de;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                max-width: 90%;
+            }
+
+            input[type="text"], select {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="http://localhost:8080/register" method="post">
+            <h2>Create a New Account</h2>
+            <input type="text" name="firstName" placeholder="First Name" required>
+            <input type="text" name="lastName" placeholder="Last Name" required>
+            <input type="text" name="age" placeholder="Age" required>
+            <input type="text" name="parentName" placeholder="Parent's Name" required>
+            <input type="text" name="parentMobile" placeholder="Parent's Mobile Number" required>
+            <input type="text" name="parentEmail" placeholder="Parent's Email ID" required>
+            <select name="studentClass" required>
+                <option value="">Select Class Studying</option>
+                <option value="1">1st Class</option>
+                <option value="2">2nd Class</option>
+                <option value="3">3rd Class</option>
+                <option value="4">4th Class</option>
+                <option value="5">5th Class</option>
+                <option value="6">6th Class</option>
+                <option value="7">7th Class</option>
+                <option value="8">8th Class</option>
+            </select>
+            <input type="submit" value="Register">
+        </form>
+        <div class="footer">
+            &copy; 2025 VRL PLATFORM. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

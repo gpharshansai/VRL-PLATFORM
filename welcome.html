@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - VRL PLATFORM</title>
+    <style>
+        body {
+            background-color: #001f3f; /* Dark blue */
+            color: #ffffff; /* White text */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            text-align: center;
+            background-image: url('vr_background.jpg'); /* Virtual reality background */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Header and Navigation */
+        .header {
+            width: 100%;
+            background-color: #003366; /* Darker blue for header */
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin: 0;
+            padding-left: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+        }
+
+        .nav-menu {
+            display: flex;
+            padding-right: 20px;
+        }
+
+        .nav-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            background-color: #0074D9; /* Blue on hover */
+        }
+
+        /* Content and Sections */
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .content .section {
+            background-color: rgba(0, 31, 63, 0.8); /* Transparent background */
+            padding: 20px;
+            margin: 10px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #0074D9; /* Blue */
+            color: #ffffff;
+            padding: 12px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .button:hover {
+            background-color: #005bb5; /* Darker blue */
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #003366; /* Darker blue for footer */
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            color: #b0c4de;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                padding-right: 0;
+            }
+
+            .nav-menu a {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>VR Learning Platform</h1>
+        <nav class="nav-menu">
+            <a href="studentprofile.html">Student Profile</a>
+            <a href="setting.html">Settings</a>
+            <a href="help.html">Help</a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <div class="section">
+            <h2>UPDATIONS</h2>
+            <p>Here you can set up your VR learning environment's credintials .</p>
+            <!-- Link to profile.html added here -->
+            <a href="profile.html" class="button">UPDATE NOW</a>
+        </div>
+
+        <div class="section">
+            <h2>Join Your First VR Class</h2>
+            <p>Experience immersive learning with virtual reality classrooms.</p>
+            <a href="join_class.html" class="button">Join a VR Class Now</a>
+        </div>
+
+        <div class="section">
+            <h2>Explore Courses</h2>
+            <p>Browse through a variety of VR-enabled courses designed for enhanced learning.</p>
+            <a href="video_session.html" class="button">View Courses</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 VRL PLATFORM. All rights reserved.
+    </div>
+</body>
+</html>

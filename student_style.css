@@ -1,0 +1,97 @@
+/* General page styling */
+body {
+    background-color: #001f3f;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    text-align: center;
+    background-image: url('vr_background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Profile container styling */
+.profile-container {
+    background-color: rgba(0, 31, 63, 0.95);
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Heading styling */
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Input fields and labels */
+.input-container {
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: calc(100% - 24px);
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Button styling */
+.button {
+    background-color: #0074D9;
+    color: #ffffff;
+    padding: 12px 25px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Success message styling */
+.message {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #28a745; /* Green color for success message */
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Button container */
+.button-container {
+    margin-top: 20px;
+}

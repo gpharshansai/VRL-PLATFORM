@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - VRL PLATFORM</title>
+    <style>
+        body {
+            background-color: #001f3f;
+            background-image: url('vr_background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .profile-container {
+            background-color: rgba(0, 31, 63, 0.95);
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+        h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .input-container {
+            font-size: 18px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .input-label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: calc(100% - 24px);
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .button {
+            background-color: #0074D9;
+            color: #ffffff;
+            padding: 12px 25px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #005bb5;
+            transform: scale(1.05);
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #28a745;
+            font-weight: bold;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        // Load profile data from Local Storage on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            loadProfile();
+        });
+
+        // Save profile data to Local Storage
+        function updateProfile() {
+            const profileData = {
+                name: document.getElementById('name').value,
+                course: document.getElementById('course').value,
+                progress: document.getElementById('progress').value,
+                email: document.getElementById('email').value,
+                contact: document.getElementById('contact').value,
+                bio: document.getElementById('bio').value
+            };
+
+            // Store data in Local Storage
+            localStorage.setItem("profileData", JSON.stringify(profileData));
+
+            // Display success message
+            const messageDiv = document.getElementById('updateMessage');
+            messageDiv.textContent = "Profile updated successfully!";
+            messageDiv.classList.remove('hidden');
+
+            // Show the back to dashboard button
+            const backButton = document.getElementById('backButton');
+            backButton.classList.remove('hidden');
+        }
+
+        // Load profile data from Local Storage
+        function loadProfile() {
+            const savedProfileData = localStorage.getItem("profileData");
+            if (savedProfileData) {
+                const profileData = JSON.parse(savedProfileData);
+                document.getElementById('name').value = profileData.name || "";
+                document.getElementById('course').value = profileData.course || "";
+                document.getElementById('progress').value = profileData.progress || "";
+                document.getElementById('email').value = profileData.email || "";
+                document.getElementById('contact').value = profileData.contact || "";
+                document.getElementById('bio').value = profileData.bio || "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Student Profile</h1>
+        <div class="input-container">
+            <label class="input-label" for="name">Name:</label>
+            <input type="text" id="name">
+        </div>
+        <div class="input-container">
+            <label class="input-label" for="course">Course:</label>
+            <input type="text" id="course">
+        </div>
+        <div class="input-container">
+            <label class="input-label" for="progress">Progress:</label>
+            <input type="text" id="progress">
+        </div>
+        <div class="input-container">
+            <label class="input-label" for="email">Email:</label>
+            <input type="text" id="email">
+        </div>
+        <div class="input-container">
+            <label class="input-label" for="contact">Contact Number:</label>
+            <input type="text" id="contact">
+        </div>
+        <div class="input-container">
+            <label class="input-label" for="bio">Bio:</label>
+            <input type="text" id="bio">
+        </div>
+        
+        <button class="button" onclick="updateProfile()">Update Profile</button>
+        
+        <!-- Success message -->
+        <div id="updateMessage" class="message hidden"></div>
+        
+        <!-- Button container to align buttons properly -->
+        <div class="button-container">
+            <!-- Back to Dashboard button, initially hidden -->
+            <a href="welcome2.html" class="button hidden" id="backButton">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>
